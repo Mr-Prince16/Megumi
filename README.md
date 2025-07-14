@@ -2,7 +2,7 @@
 
 Megumi is a fully functional, responsive, and visually appealing frontend for a Gemini-style conversational AI chat application. It's built with Next.js, Tailwind CSS, and Genkit, featuring a sleek neumorphic design with fluid animations. The application simulates a complete user experience from authentication to real-time chat with an AI.
 
-**Live Demo URL:** xx
+**Live Demo URL:** https://megumi-srinjoy-bhattacharyas-projects.vercel.app/
 
 ## 📸 Screenshots
 
