@@ -9,7 +9,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'Nexus.AI',
+  title: 'Megumi',
   description: 'A modern chat application by Kuvaka Tech',
 };
 

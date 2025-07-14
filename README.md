@@ -1,6 +1,10 @@
-# Nexus.AI - A Modern Conversational AI Chat Application
+# Megumi - A Modern Conversational AI Chat Application
 
-Nexus.AI is a fully functional, responsive, and visually appealing frontend for a Gemini-style conversational AI chat application. It's built with Next.js, Tailwind CSS, and Genkit, featuring a sleek neumorphic design with fluid animations. The application simulates a complete user experience from authentication to real-time chat with an AI.
+Megumi is a fully functional, responsive, and visually appealing frontend for a Gemini-style conversational AI chat application. It's built with Next.js, Tailwind CSS, and Genkit, featuring a sleek neumorphic design with fluid animations. The application simulates a complete user experience from authentication to real-time chat with an AI.
+
+**Live Demo URL:** 
+
+## 📸 Screenshots
 
 ## ✨ Features
 
@@ -12,7 +16,7 @@ Nexus.AI is a fully functional, responsive, and visually appealing frontend for 
     - AI **typing indicator** with a modern shimmer effect.
     - Human-readable timestamps (e.g., "5 minutes ago").
     - **Copy-to-clipboard** functionality on message hover.
-- **Advanced Scrolling:**
+- **Efficient Scrolling:**
     - Auto-scroll to the latest message.
     - **Reverse infinite scroll** to efficiently load older messages on demand.
 - **Modern UX/UI:**
@@ -76,7 +80,7 @@ Follow these instructions to set up and run the project locally.
 The application will be available at `http://localhost:9002`.
 
 ## 📁 Project Structure
-
+The project follows a standard Next.js App Router structure, with a clear separation of concerns.
 The project follows a standard Next.js App Router structure, with a clear separation of concerns.
 
 ```

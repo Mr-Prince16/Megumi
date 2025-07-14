@@ -64,7 +64,7 @@ function SidebarContent({
         <div className="flex items-center gap-2 mb-4">
           <MessageSquare className="h-7 w-7 text-primary animate-float" />
           <h1 className="animated-gradient-text text-xl font-bold tracking-tight">
-            Nexus.AI
+            Megumi
           </h1>
         </div>
 
@@ -332,7 +332,7 @@ function ChatLayoutContent({ children }: { children: React.ReactNode }) {
       <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
         <SheetContent side="left" className="p-0 w-full max-w-sm">
           <SheetHeader className="sr-only">
-             <SheetTitle>Nexus.AI Menu</SheetTitle>
+             <SheetTitle>Megumi Menu</SheetTitle>
              <SheetDescription>Main navigation and chat management menu.</SheetDescription>
           </SheetHeader>
           <SidebarContent {...sidebarProps} />

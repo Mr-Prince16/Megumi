@@ -130,7 +130,7 @@ export default function LoginPage() {
        <header className="absolute top-0 left-0 right-0 flex justify-between items-center p-4 md:p-6">
           <div className="flex items-center gap-2">
             <MessageSquare className="h-8 w-8 text-primary animate-float" />
-            <h1 className="animated-gradient-text text-2xl font-bold tracking-tight">Nexus.AI</h1>
+            <h1 className="animated-gradient-text text-2xl font-bold tracking-tight">Megumi</h1>
           </div>
           <ThemeToggle />
        </header>

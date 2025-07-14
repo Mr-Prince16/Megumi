@@ -36,7 +36,7 @@ const chatFlow = ai.defineFlow(
   async (input) => {
     const {text} = await ai.generate({
       prompt: [
-        {text: `You are a helpful AI assistant named Nexus.AI. Respond to the user's message.`},
+        {text: `You are a helpful AI assistant named Megumi. Respond to the user's message.`},
         {text: `User's message: ${input.message}`},
         ...(input.imageUrl ? [{media: {url: input.imageUrl}}] : []),
       ],

@@ -135,7 +135,7 @@ export default function ChatroomPage() {
             id: (Date.now() + 1).toString(),
             text: response.message,
             sender: 'ai',
-            username: 'Nexus.AI',
+            username: 'Megumi',
             timestamp: Date.now(),
         };
         const finalMessages = [...updatedMessages, aiMessage];
@@ -308,7 +308,7 @@ export default function ChatroomPage() {
                         <AvatarFallback>N</AvatarFallback>
                     </Avatar>
                     <div className="neumorphic-out-muted rounded-xl px-4 py-3 text-sm w-48">
-                        <p className="font-semibold mb-2">Nexus.AI</p>
+                        <p className="font-semibold mb-2">Megumi</p>
                         <div className="space-y-2">
                            <Skeleton className="h-3 w-full animate-shimmer" />
                            <Skeleton className="h-3 w-5/6 animate-shimmer" />
