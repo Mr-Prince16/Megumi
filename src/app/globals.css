@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%; /* Lighter Gray */
+    --foreground: 224 71.4% 4.1%;
+    --card: 220 20% 97%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262 52% 50%; /* #673AB7 */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 92.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 288 100% 56%; /* #D020FF */
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 52% 50%;
+    --radius: 0.8rem; /* Slightly larger radius for softer look */
+
+    /* Neumorphism Shadows */
+    --shadow-light: -6px -6px 12px hsl(220 20% 100% / 0.8), 6px 6px 12px hsl(220 20% 0% / 0.1);
+    --shadow-dark: -6px -6px 12px hsl(224 30% 20% / 0.5), 6px 6px 12px hsl(224 30% 5% / 0.9);
+    --shadow-inset-light: inset -4px -4px 8px hsl(220 20% 100% / 0.7), inset 4px 4px 8px hsl(220 20% 0% / 0.15);
+    --shadow-inset-dark: inset -4px -4px 8px hsl(224 30% 20% / 0.5), inset 4px 4px 8px hsl(224 30% 5% / 0.9);
+  }
+ 
+  .dark {
+    --background: 224 30% 15%; /* Darker Background */
+    --foreground: 210 20% 98%;
+    --card: 224 30% 15%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 30% 12%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 262 52% 60%; /* Lighter violet for dark mode */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 224 30% 20%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 288 100% 66%; /* Lighter purple for dark mode */
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 25%;
+    --input: 215 27.9% 25%;
+    --ring: 262 52% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-500;
+  }
+}
+
+@layer utilities {
+  .neumorphic-out {
+    @apply rounded-[var(--radius)] shadow-[var(--shadow-light)] transition-all duration-300 ease-in-out;
+  }
+  .dark .neumorphic-out {
+    @apply shadow-[var(--shadow-dark)];
+  }
+  .neumorphic-out:hover {
+    transform: translateY(-2px);
+  }
+  .neumorphic-out:active {
+    @apply shadow-[var(--shadow-inset-light)];
+    transform: translateY(1px);
+  }
+  .dark .neumorphic-out:active {
+    @apply shadow-[var(--shadow-inset-dark)];
+  }
+
+  .neumorphic-out-sm {
+    @apply rounded-md shadow-[var(--shadow-light)] transition-all duration-300 ease-in-out;
+  }
+  .dark .neumorphic-out-sm {
+    @apply shadow-[var(--shadow-dark)];
+  }
+   .neumorphic-out-sm:hover {
+    transform: translateY(-1px);
+  }
+  .neumorphic-out-sm:active {
+    @apply shadow-[var(--shadow-inset-light)];
+  }
+  .dark .neumorphic-out-sm:active {
+    @apply shadow-[var(--shadow-inset-dark)];
+  }
+
+  .neumorphic-in {
+    @apply rounded-[var(--radius)] border-none bg-background shadow-[var(--shadow-inset-light)] transition-all duration-300 ease-in-out;
+  }
+  .dark .neumorphic-in {
+    @apply bg-card shadow-[var(--shadow-inset-dark)];
+  }
+
+  .neumorphic-out.bg-primary, .neumorphic-out.bg-destructive {
+    color: hsl(var(--primary-foreground));
+    box-shadow: -4px -4px 10px hsl(var(--primary) / 0.7), 4px 4px 10px hsl(0 0% 0% / 0.2);
+  }
+  .dark .neumorphic-out.bg-primary, .dark .neumorphic-out.bg-destructive {
+    box-shadow: -4px -4px 10px hsl(var(--primary) / 0.5), 4px 4px 10px hsl(0 0% 0% / 0.4);
+  }
+
+  .neumorphic-out-muted {
+     @apply rounded-[var(--radius)] bg-muted shadow-[var(--shadow-light)] transition-all duration-300 ease-in-out;
+  }
+  .dark .neumorphic-out-muted {
+     @apply bg-muted shadow-[var(--shadow-dark)];
+  }
+
+  .neumorphic-avatar {
+     @apply shadow-[var(--shadow-light)];
+  }
+   .dark .neumorphic-avatar {
+     @apply shadow-[var(--shadow-dark)];
+  }
+
+
+  /* Animations */
+  .animated-gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient-text 5s linear infinite;
+  }
+
+  @keyframes gradient-text {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-in-out forwards;
+  }
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animate-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)/0.1), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  .dark .animate-shimmer::after {
+     background: linear-gradient(90deg, transparent, hsl(var(--primary)/0.2), transparent);
+  }
+}
